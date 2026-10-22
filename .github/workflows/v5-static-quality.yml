@@ -30,6 +30,8 @@ jobs:
         run: node tests/gift-card.test.cjs
       - name: Test site experiences bootstrap
         run: node tests/experiences-smoke.test.cjs
+      - name: Test V6 gallery and motion regressions
+        run: node tests/v6-gallery.test.cjs
       - name: Verify V5 is a local demo
         run: |
           grep -q "BROWSER-ONLY DEMONSTRATION" assets/v5-desk.js
