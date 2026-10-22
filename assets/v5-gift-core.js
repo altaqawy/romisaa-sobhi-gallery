@@ -39,21 +39,26 @@
   }
   function xml(s){return String(s??"").replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[ch]));}
   function escapeLine(raw){return xml(raw).replace(/\r?\n/g," ");}
-  function wrap(raw, max=29, maxLines=7) {
+  function wrap(raw, max=32, maxLines=10) {
     const words=String(raw??"").replace(/\s+/g," ").trim().split(" ").filter(Boolean);
-    const result=[];
-    for(const word of words){
-      const next=result.length?result[result.length-1]+" "+word:word;
-      if(result.length&&next.length<=max)result[result.length-1]=next;
-      else if(result.length<maxLines)result.push(word.length>max?word.slice(0,max):word);
-      else break;
+    const lines=[];
+    for(let word of words){
+      while(word.length){
+        if(lines.length===0)lines.push("");
+        const i=lines.length-1,line=lines[i],sep=line?" ":"";
+        const space=max-line.length-sep.length;
+        if(space<=0){lines.push("");continue;}
+        if(word.length<=space){lines[i]=line+sep+word;word="";}
+        else if(line){lines.push("");}
+        else{lines[i]=word.slice(0,max);word=word.slice(max);if(word.length)lines.push("");}
+      }
     }
-    return result;
+    return lines.filter(Boolean).slice(0,maxLines);
   }
   function svg(raw){
     const x=normalize(raw),theme=THEMES[x.theme],lines=wrap(x.message,29,8);
     const from=x.sender||"WITH LOVE";const to=x.recipient?"إلى "+x.recipient:"لكل لحظة جميلة";
-    const body=lines.map((line,i)=>'<text x="350" y="'+(485+i*48)+'" text-anchor="middle" direction="rtl" font-size="28" fill="'+theme.color+'" font-family="Cairo, Tahoma, sans-serif">'+escapeLine(line)+'</text>').join("");
+    const body=lines.map((line,i)=>'<text x="350" y="'+(470+i*35)+'" text-anchor="middle" direction="rtl" font-size="23" fill="'+theme.color+'" font-family="Cairo, Tahoma, sans-serif">'+escapeLine(line)+'</text>').join("");
     return '<svg xmlns="http://www.w3.org/2000/svg" width="700" height="970" viewBox="0 0 700 970" role="img" aria-label="كارت إهداء">'
       +'<rect width="700" height="970" fill="'+theme.paper+'"/>'
       +'<rect x="36" y="36" width="628" height="898" rx="4" fill="none" stroke="'+theme.accent+'" stroke-width="2"/>'
