@@ -33,3 +33,7 @@
 .r5-fav-detail{display:inline-flex;align-items:center;gap:9px;border:1px solid #d9bbb9;background:#fdf9f4;color:#6a4251;padding:12px 15px;margin-top:12px;min-height:47px}
 .r5-wishlist-grid{margin:30px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}.r5-wishlist-card{position:relative;background:#f4ebe4;padding-bottom:20px;overflow:hidden}.r5-wishlist-card img{height:285px;object-fit:cover}.r5-wishlist-card>div{padding:17px}.r5-wishlist-card h3{font-size:15px}.r5-wishlist-card button{border:0;background:transparent;color:#765060;padding:0;text-decoration:underline;cursor:pointer}
 @media(max-width:830px){.r5-wishlist-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:590px){.r5-wishlist-grid{gap:12px}.r5-wishlist-card img{height:195px}.r5-fav{top:8px;left:8px;width:33px;height:33px}}
+
+/* V5.4: four editorial home experiences */
+@media(min-width:1061px){.r5-collection-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}.r5-home-intro .r5-tile{min-height:355px}.r5-home-intro .r5-tile-text h3{font-size:20px}}
+@media(min-width:780px) and (max-width:1060px){.r5-collection-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
