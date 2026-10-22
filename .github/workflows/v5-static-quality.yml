@@ -26,6 +26,8 @@ jobs:
         run: node tests/review-flow.test.cjs
       - name: Test occasion scheduling arithmetic
         run: node tests/planner.test.cjs
+      - name: Test gift message studio safety and SVG export
+        run: node tests/gift-card.test.cjs
       - name: Verify V5 is a local demo
         run: |
           grep -q "BROWSER-ONLY DEMONSTRATION" assets/v5-desk.js
