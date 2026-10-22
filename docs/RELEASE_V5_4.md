@@ -28,3 +28,9 @@ Delivery date: 22 October 2026. Status: public static design demo.
 
 ## Next production stage
 Authenticated backend and customer order tracking; formal product prices; merchant-provided delivery and payment methods. A private QR-gift page is a separate privacy/security workstream and should not use an unprotected public URL containing a personalized message.
+
+## Post-release regression repair
+- Fixed three incorrect single-element selectors using `querySelector` where iterable `querySelectorAll` results were required. They previously could abort experiential navigation and wishlist bootstrapping.
+- Re-verified the mocked homepage startup: four editorial experience cards (including gift cards) and navigation/footer creation completed without an exception.
+- Added `tests/experiences-smoke.test.cjs` and included it in quality workflow.
+- Updated in-page experience marker to `THE LIVING ATELIER / V5.4 • DEMO`.
