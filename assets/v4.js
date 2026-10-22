@@ -10,16 +10,16 @@
  const page=d.body.dataset.page||'index';
  d.body.classList.add('v4-page');
  const grain=(c)=>c;
- const motionSvg=`<svg class="v4-hero-silk" viewBox="0 0 640 685" preserveAspectRatio="none" aria-hidden="true"><path class="v4-thread-path" d="M 34 600 C 64 552 71 484 49 434 C 1 326 67 223 155 213 S 308 210 320 155 C 333 84 440 46 540 75 S 622 162 592 205 C 562 248 532 274 575 313 C 635 368 617 445 564 480"/><path class="v4-thread-path v4-thread-glow" d="M 34 600 C 64 552 71 484 49 434 C 1 326 67 223 155 213 S 308 210 320 155 C 333 84 440 46 540 75 S 622 162 592 205 C 562 248 532 274 575 313 C 635 368 617 445 564 480"/><g class="v4-butterfly" transform="translate(555 456)"><path d="M0 3 C-28 -62 -73 -65 -77 -25 C-82 0 -50 16 -9 13 C-53 16 -56 52 -28 57 C-5 62 0 30 0 3Z"/><path d="M0 3 C24 -64 66 -56 71 -23 C76 3 48 14 9 13 C49 19 52 48 27 54 C7 57 0 28 0 3Z"/><path d="M0 -18 Q5 1 0 24 M0 -16 Q-8 -36 -19 -40 M0 -16 Q10 -39 20 -40" fill="none" stroke="#8e6772" stroke-width="2"/></g></svg>`;
+ const motionSvg=`<svg class="v4-hero-silk" viewBox="0 0 640 685" preserveAspectRatio="none" aria-hidden="true"><path class="v4-thread-path" d="M 34 600 C 64 552 71 484 49 434 C 1 326 67 223 155 213 S 308 210 320 155 C 333 84 440 46 540 75 S 622 162 592 205 C 562 248 532 274 575 313 C 635 368 617 445 564 480"/><path class="v4-thread-path v4-thread-glow" d="M 34 600 C 64 552 71 484 49 434 C 1 326 67 223 155 213 S 308 210 320 155 C 333 84 440 46 540 75 S 622 162 592 205 C 562 248 532 274 575 313 C 635 368 617 445 564 480"/><g transform="translate(555 456)"><g class="v4-butterfly"><path d="M0 3 C-28 -62 -73 -65 -77 -25 C-82 0 -50 16 -9 13 C-53 16 -56 52 -28 57 C-5 62 0 30 0 3Z"/><path d="M0 3 C24 -64 66 -56 71 -23 C76 3 48 14 9 13 C49 19 52 48 27 54 C7 57 0 28 0 3Z"/><path d="M0 -18 Q5 1 0 24 M0 -16 Q-8 -36 -19 -40 M0 -16 Q10 -39 20 -40" fill="none" stroke="#8e6772" stroke-width="2"/></g></g></svg>`;
  function initHero(){const art=$('.v3-hero-art');if(!art)return;art.insertAdjacentHTML('beforeend',motionSvg+`<span class="v4-silk-caption">A THREAD OF MEMORIES · NO. 04</span>`);let stamp=$('.hero-stamp',art);if(stamp)stamp.classList.add('v4-float');}
  function initPortal(){const portal=$('#scroll-portal .portal-sticky');if(!portal)return;portal.insertAdjacentHTML('afterbegin',`<div class="v4-portal-halo" aria-hidden="true"></div><span class="v4-portal-callout" aria-hidden="true">THE ART OF KEEPING MEMORIES</span><div class="v4-portal-diamond" aria-hidden="true"><span>✧</span></div>`);}
  const gallery=[
   ['mirror-heart-gold.webp','مراية تحفظ الحكاية','01 / THE MIRROR EDIT','مرايات'],
   ['wedding-hoop.webp','تفاصيل معمولة بالحب','02 / THE STITCH EDIT','تطريز'],
   ['cap-blue.webp','ورد بخيط وإيد','03 / LITTLE TREASURES','إكسسوارات'],
-  ['graduation-cap.webp','فرحة تفضل معاكي','04 / THE GRADUATION EDIT','تخرج'],
+  ['graduation-cap.webp','فرحة تفضل معاكي','04 / THE GRADUATION EDIT','مناسبات'],
   ['baby-set.webp','أول ذكرى صغيرة','05 / LITTLE BEGINNINGS','مواليد'],
-  ['bouquet.webp','أشياء تستاهل تتقدم','06 / THE GIFT EDIT','هدايا']
+  ['bouquet.webp','أشياء تستاهل تتقدم','06 / THE GIFT EDIT','هدايا وديكور']
  ];
  function initGallery(){const anchor=$('.v3-featured');if(!anchor)return;
   const cards=gallery.map(([file,title,sub,category],i)=>`<a draggable="false" class="v4-rail-card" style="--v4-tilt:${[2,-3,1,3,-2,2][i]}deg" href="shop.html?category=${encodeURIComponent(category)}" aria-label="شوفي مجموعة ${title}"><img draggable="false" src="assets/${file}" alt="${title}" loading="lazy"><div class="v4-rail-caption"><span><small>${sub}</small><strong>${title}</strong></span><b aria-hidden="true">↗</b></div></a>`).join('');
