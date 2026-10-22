@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fbf7f1"><meta name="robots" content="noindex,nofollow">
+<meta name="description" content="مخطط مواعيد الهدايا التجريبي لموقع روميساء صبحي جاليري؛ المدد افتراضية وليست مواعيد معتمدة.">
+<title>Gift Date Planner — Romisaa Sobhi Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/v5-planner.css">
+<script defer src="assets/v5-planner.js"></script>
+</head>
+<body>
+<div class="pl-top" aria-hidden="true"></div>
+<div class="pl-shell">
+<header class="pl-header">
+<a href="index.html" class="pl-logo"><img src="assets/rs-logo.png" alt=""><div><strong>Romisaa Sobhi</strong><small>HANDMADE WITH FEELING</small></div></a>
+<span class="pl-demo">DEMO ONLY · تجربة افتراضية</span>
+<nav class="pl-links" aria-label="التنقل"><a href="shop.html">المتجر ↗</a><a href="studio.html">استوديو المناسبات ↗</a><a href="design-review.html">مراجعة التصميم ↗</a></nav>
+</header>
+<main>
+<section class="pl-hero">
+<div><span class="pl-eye">THE PERFECT MOMENT / PERSONAL GIFT / V5.3</span>
+<h1 class="pl-title">هديتك...<br><em>في الوقت المناسب.</em></h1>
+<p class="pl-lead">جرّبي حسابًا توضيحيًا لوقت تجهيز الهدية قبل المناسبة. غيّري مدة التصنيع والتوصيل وهامش الأمان بنفسك، وشوفي إزاي الموعد النهائي بيتأثر.</p></div>
+<div class="pl-hero-image"><img src="assets/bouquet.webp" alt="بوكيه ورد من الأعمال المرسلة إلى روميساء"><span class="pl-stamp">MEMORIES ARE MADE IN TIME ✳</span></div>
+</section>
+<div class="pl-warning"><strong>مهم جدًا:</strong> مفيش بيانات رسمية من روميساء عن مدة تصنيع كل منتج أو شركات الشحن. الأرقام في النموذج مجرد افتراضات أنت بتحددها، ومش تأكيد توفر أو حجز أو ضمان تسليم. لازم التواصل مع الجاليري قبل الطلب.</div>
+<section class="pl-work" aria-label="مخطط مواعيد توضيحي">
+<form class="pl-card" id="pl-form" onsubmit="return false">
+<span class="pl-eye">01 / YOUR OCCASION</span>
+<h2>حددي الموعد</h2>
+<label class="pl-field">نوع القطعة
+<select id="pl-kind"><option>هدية مطرزة</option><option>مراية مخصصة</option><option>إكسسوارات مناسبة</option><option>هدايا مواليد</option><option>مجموعة أفراح</option></select>
+</label>
+<div class="pl-two">
+<label class="pl-field">تاريخ البداية المفترض<input id="pl-start" required type="date"></label>
+<label class="pl-field">تاريخ المناسبة<input id="pl-event" required type="date"></label>
+</div>
+<div class="pl-two">
+<label class="pl-field">أيام التصنيع (افتراض)<input id="pl-production" type="number" min="1" max="120" value="10" step="1" required></label>
+<label class="pl-field">أيام الشحن (افتراض)<input id="pl-shipping" type="number" min="0" max="120" value="3" step="1" required></label>
+</div>
+<label class="pl-field">هامش أمان إضافي (أيام)<input id="pl-buffer" type="number" min="0" max="120" value="3" step="1" required></label>
+<p class="pl-result-note">قيم البداية 10 + 3 + 3 أيام اختيرت لإظهار طريقة الحساب فقط وليست معلومات عن الجاليري.</p>
+</form>
+<div class="pl-card">
+<span class="pl-eye">02 / AN ILLUSTRATIVE TIMELINE</span>
+<h2>النتيجة التوضيحية</h2>
+<div class="pl-status" id="pl-status"><strong id="pl-status-title">جاري الحساب</strong><p id="pl-status-note"></p></div>
+<div class="pl-metrics">
+<div class="pl-metric"><b id="pl-estimated">—</b><span>الانتهاء بعد هامش الأمان</span></div>
+<div class="pl-metric"><b id="pl-occasion">—</b><span>موعد المناسبة المختار</span></div>
+<div class="pl-metric"><b id="pl-days">—</b><span>إجمالي أيام الافتراض</span></div>
+<div class="pl-metric"><b id="pl-slack">—</b><span>الوقت المتبقي / التأخير</span></div>
+</div>
+<ol class="pl-steps" id="pl-timeline" aria-label="مراحل حساب المواعيد"></ol>
+<p id="pl-error" class="pl-result-note" aria-live="polite" hidden></p>
+<div class="pl-actions"><button id="pl-copy" class="pl-bt" type="button">نسخ الخطة التوضيحية</button><a class="pl-bt secondary" href="contact.html">اسألي عن المدة الحقيقية ↗</a></div>
+<p class="pl-result-note">لا يتم إرسال أي بيانات من الصفحة، ولا تتم مزامنة التواريخ مع سلة التسوق أو الطلبات.</p>
+</div>
+</section>
+</main>
+<footer class="pl-footer"><span>ROMISAA SOBHI GALLERY — PLANNING CONCEPT</span><span>V5.3 · A demo schedule is never a promise of delivery</span></footer>
+</div>
+<div class="pl-toast" id="pl-toast" role="status" aria-live="polite"></div>
+</body>
+</html>
