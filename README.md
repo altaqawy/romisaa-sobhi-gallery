@@ -4,6 +4,7 @@
 
 ### Current interactive experiences
 - [Home](index.html), [Shop](shop.html), [Interactive Lookbook](lookbook.html), [Set Builder](studio.html), [Gift Finder](finder.html), [Stitch Lab](learn.html), [Wishlist](wishlist.html).
+- **New V5.3:** [Gift Date Planner — illustration of event lead times](delivery-planner.html). Uses visitor-entered assumed durations, never guarantees seller capacity or shipping. See [V5.3 report](docs/RELEASE_V5_3.md).
 - **New V5.2:** [Design Review Studio — fictional versioned approvals](design-review.html). Revision requests and approvals are simulated locally; a newer version invalidates earlier approval. See [delivery report](docs/RELEASE_V5_2.md).
 - **New:** [Atelier Desk — local operations simulator](atelier-desk.html). Catalogue draft editing, fictional order stages, a quote calculator and JSON export. This is a public, unauthenticated browser-only demo; changes are **not** visible to customers and are **not** sent to a server.
 - [V5 implementation report](docs/RELEASE_V5_DESK.md) · [Production architecture](docs/V5_ARCHITECTURE.md) · [Database reference (not deployed)](docs/V5_SCHEMA_REFERENCE.sql).
