@@ -139,3 +139,21 @@ create policy "read own enrollment" on shop.academy_enrollments for select to au
 -- No client policy for creating orders, recording payments, writing designs or approvals,
 -- publishing lessons, or creating staff entries: those actions MUST be server-only,
 -- authorized and validated, with transaction boundaries and webhook verification.
+
+
+-- Example permissions for a dedicated non-public shop schema. Review in staging.
+grant usage on schema shop to anon,authenticated;
+grant select on shop.products,shop.academy_lessons to anon,authenticated;
+grant select on shop.customer_profiles,shop.custom_requests,shop.orders,
+ shop.order_lines,shop.design_versions,shop.design_decisions,
+ shop.payment_attempts,shop.academy_enrollments to authenticated;
+grant insert,update on shop.customer_profiles to authenticated;
+grant insert on shop.custom_requests to authenticated;
+-- Staff write operations and all payment/order/design mutations are performed
+-- through server-side role-authorized endpoints using controlled DB privileges.
+
+create index if not exists idx_custom_requests_customer on shop.custom_requests(customer_id,created_at desc);
+create index if not exists idx_orders_customer on shop.orders(customer_id,created_at desc);
+create index if not exists idx_order_lines_order on shop.order_lines(order_id);
+create index if not exists idx_design_versions_request on shop.design_versions(request_id,version_number desc);
+create index if not exists idx_payment_attempts_order on shop.payment_attempts(order_id);
