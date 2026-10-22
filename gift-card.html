@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fbf7f1">
+<meta name="description" content="صممي كارت إهداء شخصي لروميساء صبحي جاليري، مع ثلاث بطاقات أنيقة ومعاينة مباشرة وطباعة محلية.">
+<title>Gift Message Studio | Romisaa Sobhi Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/v5-gift.css">
+<script defer src="assets/v5-gift-core.js"></script>
+<script defer src="assets/v5-gift.js"></script>
+</head>
+<body>
+<div class="gift-band" aria-hidden="true"></div>
+<div class="gift-shell">
+<header class="gift-header">
+<a class="gift-brand" href="index.html" aria-label="روميساء صبحي جاليري - الصفحة الرئيسية">
+<img src="assets/rs-logo.png" alt="">
+<span><strong>Romisaa Sobhi</strong><small>G A L L E R Y</small></span>
+</a>
+<nav class="gift-links" aria-label="روابط الجاليري">
+<a href="finder.html">مساعد الهدايا ↗</a>
+<a href="studio.html">استوديو المناسبات ↗</a>
+<a href="shop.html">المتجر ↗</a>
+</nav>
+</header>
+<main>
+<section class="gift-hero">
+<div>
+<span class="eyebrow">THE ART OF GIVING / GIFT MESSAGE STUDIO / V5.4</span>
+<h1>كل هدية<br><em>ليها كلمة.</em></h1>
+<p>صمّمي كارت إهداء بتفاصيل بسيطة وشخصية. اختاري الألوان، اكتبي رسالتك، وخدي النسخة للطباعة أو الإرسال بنفسك.</p>
+</div>
+<div class="gift-hero-side">
+<b>رسالة صغيرة ممكن تعيش سنين.</b>
+<p>الاستوديو ده تجربة تصميم مجانية ومحلية، مش طلب منتج مدفوع. الرسالة لا تُرسل لأي جهة ولا تُحفظ على خادم. كارت الإهداء الرقمي برابط خاص أو QR شخصي محتاج خدمة استضافة وخصوصية قبل تفعيله.</p>
+</div>
+</section>
+<section class="gift-workspace" aria-label="تصميم كارت الإهداء" id="gift-editor">
+<div class="gift-controls">
+<span class="eyebrow">01 / MAKE IT YOURS</span>
+<h2>تفاصيل الرسالة</h2>
+<label class="gift-field">المناسبة
+<select id="gift-occasion" aria-label="اختاري المناسبة"><option>زفاف وخطوبة</option></select>
+</label>
+<div class="gift-meta"><b>اختاري التصميم</b><span class="gift-muted">3 ستايلات</span></div>
+<div class="gift-theme-row" role="group" aria-label="شكل بطاقة الإهداء">
+<button type="button" data-gift-theme="pearl" class="gift-theme" aria-pressed="true" style="--chip:#fffaf5;--trim:#c8ae8d"><span>Pearl Letter</span></button>
+<button type="button" data-gift-theme="rose" class="gift-theme" aria-pressed="false" style="--chip:#f9e9ea;--trim:#b87886"><span>Blush Garden</span></button>
+<button type="button" data-gift-theme="night" class="gift-theme" aria-pressed="false" style="--chip:#3b2b37;--trim:#c7a77e"><span>Midnight Keepsake</span></button>
+</div>
+<label class="gift-field">إلى مَن؟ (اختياري)
+<input id="gift-recipient" maxlength="40" autocomplete="off" placeholder="مثلاً: لصاحبتي الغالية">
+</label>
+<label class="gift-field">رسالتك
+<textarea id="gift-message" maxlength="240" rows="5" aria-describedby="gift-count gift-help" placeholder="كل سنة وأنتِ أجمل حكاية…"></textarea>
+</label>
+<div class="gift-meta"><span id="gift-help" class="gift-muted" role="status">اكتبي رسالتك</span><span id="gift-count" class="gift-muted">0 / 240</span></div>
+<label class="gift-field">مِن مَن؟ (اختياري)
+<input id="gift-sender" maxlength="40" autocomplete="off" placeholder="مثلاً: من اللي بيحبك">
+</label>
+<div class="gift-actions">
+<button class="gift-btn primary" type="button" id="gift-print">طباعة / PDF ↗</button>
+<button class="gift-btn" type="button" id="gift-download">تحميل SVG ↓</button>
+<button class="gift-btn quiet" type="button" id="gift-copy">نسخ الرسالة</button>
+<button class="gift-btn quiet" type="button" id="gift-reset">إعادة البداية</button>
+</div>
+<p class="gift-privacy"><b>خصوصية الكارت:</b> البيانات لا تُرسل للسيرفر، ولا تُخزّن في قاعدة بيانات أو حساب. الطباعة وتصدير SVG يحصلوا على جهازك فقط. عند مشاركة الكارت بنفسك، تصبح الرسالة مرئية لمن ترسلها إليه.</p>
+</div>
+<div class="gift-preview-wrap">
+<div class="gift-preview-header"><h2>معاينة كارت الإهداء</h2><span id="gift-theme-name">Pearl Letter</span></div>
+<div class="gift-scene">
+<article class="gift-card" id="gift-card" data-theme="pearl" aria-label="معاينة كارت الإهداء">
+<div aria-hidden="true" class="gift-mark">❧</div>
+<h2 class="gift-card-title">Romisaa Sobhi</h2>
+<p class="gift-card-subtitle">G A L L E R Y</p>
+<div class="gift-divider" aria-hidden="true"></div>
+<p class="gift-occasion" id="gift-card-occasion">زفاف وخطوبة</p>
+<h3 class="gift-recipient" id="gift-card-to">لكل لحظة جميلة</h3>
+<p class="gift-body" id="gift-card-message">كل ذكرى حلوة بتبدأ بتفصيلة من القلب.</p>
+<p class="gift-sender" id="gift-card-from">WITH LOVE</p>
+<p class="gift-signature">HANDMADE WITH FEELING</p>
+</article>
+</div>
+<p class="gift-preview-note">اختاري Print ثم Save as PDF لو عايزة نسخة PDF. مقاس الطباعة مصمم لـA5؛ النتيجة تعتمد على إعدادات الطابعة أو المتصفح.</p>
+</div>
+</section>
+</main>
+<footer class="gift-footer"><span>ROMISAA SOBHI GALLERY — A LITTLE NOTE WITH EVERY MEMORY</span><span>V5.4 · Local concept by Rawnak Agency · No purchase or payment</span></footer>
+</div>
+<div class="gift-toast" id="gift-toast" role="status" aria-live="polite"></div>
+</body>
+</html>
