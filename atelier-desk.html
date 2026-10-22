@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fbf8f3">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="مساحة تجريبية لإدارة منتجات روميساء ومراحل الطلبات الوهمية وتجهيز عروض أسعار غير معتمدة. لا يوجد اتصال بقاعدة بيانات.">
+<title>Atelier Desk — معاينة تشغيل المتجر | Romisaa Sobhi Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/v5-desk.css">
+<script defer src="assets/catalog.js"></script>
+<script defer src="assets/v5-desk.js"></script>
+</head>
+<body>
+<a href="#desk-main" style="position:absolute;top:-100px;right:20px;background:#fff;padding:9px;z-index:99" onfocus="this.style.top='15px'" onblur="this.style.top='-100px'">تخطي للمحتوى</a>
+<div class="desk-top" aria-hidden="true"></div>
+<div class="desk-wrap">
+<header class="desk-header">
+<a class="desk-logo" href="index.html" aria-label="العودة للرئيسية">
+<img src="assets/rs-logo.png" alt="">
+<span><strong>Romisaa Sobhi</strong><small>ATELIER OPERATIONS / PREVIEW</small></span>
+</a>
+<span class="desk-demo">DEMO · بيانات وهمية فقط</span>
+<nav class="desk-links" aria-label="روابط اللوحة">
+<a href="shop.html">المنتجات ↗</a>
+<a href="studio.html">الاستوديو ↗</a>
+<a href="index.html">الرئيسية ↗</a>
+</nav>
+</header>
+<section class="desk-hero" aria-labelledby="desk-title">
+<div>
+<span class="eyebrow">THE ATELIER / BEHIND THE SCENES / V5 PREVIEW</span>
+<h1 id="desk-title">لكل قطعة<br><em>حكاية وتنظيم.</em></h1>
+<p>مساحة تجريبية لتصور طريقة إدارة الجاليري: مراجعة مسودات المنتجات، تجربة حركة الطلبات بين المراحل، وتجهيز عرض سعر تقديري من غير تعقيد.</p>
+</div>
+<div class="hero-note"><b>تنبيه قبل التجربة</b><br>دي مش لوحة إدارة خاصة أو محمية بكلمة سر؛ أي شخص يقدر يفتح الرابط. مفيش طلبات حقيقية أو بيانات عملاء هنا، وأي تعديل بيتحفظ على جهازك فقط، ومش بيغيّر أسعار الموقع عند باقي الزوار.</div>
+</section>
+<div class="desk-meta"><span>ROMISAA SOBHI GALLERY · WORKFLOW PROTOTYPE</span><span>محلي فقط / لا يوجد دفع أو قاعدة بيانات أو تسجيل دخول</span></div>
+<main id="desk-main" class="desk-main">
+<nav class="desk-tabs" role="tablist" aria-label="أقسام مساحة التجربة">
+<button class="tab" id="tab-products" role="tab" aria-selected="true" aria-controls="panel-products" type="button">01 · مسودات المنتجات</button>
+<button class="tab" id="tab-orders" role="tab" aria-selected="false" aria-controls="panel-orders" type="button">02 · مراحل الطلبات</button>
+<button class="tab" id="tab-quotes" role="tab" aria-selected="false" aria-controls="panel-quotes" type="button">03 · عروض الأسعار</button>
+</nav>
+<div class="desk-cards" aria-label="إحصاءات تجريبية">
+<div class="stat"><span class="num" id="stat-items">—</span><span class="desc">قطع بالكتالوج التجريبي</span></div>
+<div class="stat"><span class="num" id="stat-reviewed">—</span><span class="desc">مسودات جاهزة للمراجعة</span></div>
+<div class="stat"><span class="num" id="stat-orders">—</span><span class="desc">طلبات وهمية قيد التجربة</span></div>
+<div class="stat"><span class="num" id="stat-finished">—</span><span class="desc">طلبات وهمية في المرحلة الأخيرة</span></div>
+</div>
+<section id="panel-products" class="panel" role="tabpanel" aria-labelledby="tab-products">
+<div class="section-head"><div><span class="eyebrow">01 / THE COLLECTION</span><h2>مسودات المنتجات</h2><p>تعديلات محلية للتخطيط فقط. أسعار الكتالوج على الموقع تظل تجريبية.</p></div><span class="pill soft" id="found-count">—</span></div>
+<div class="desk-toolbar"><input class="input search" id="desk-search" type="search" placeholder="ابحثي باسم القطعة أو المناسبة..." aria-label="بحث المنتجات"><select class="input" id="desk-category" aria-label="فلترة التصنيفات"><option value="all">كل الفئات</option></select><button type="button" class="btn primary" id="export-drafts">↓ تنزيل مسودات JSON</button></div>
+<div class="product-list" id="desk-products" aria-live="polite"></div>
+<p class="privacy">الأسعار هنا مجرد أرقام للمعاينة. تنزيل المسودات يُنشئ ملفًا على جهازك ولا ينشر أي تحديث في المتجر.</p>
+</section>
+<section id="panel-orders" class="panel" role="tabpanel" aria-labelledby="tab-orders" hidden>
+<div class="section-head"><div><span class="eyebrow">02 / STUDIO FLOW</span><h2>من الفكرة إلى القطعة</h2><p>مراحل عمل بصور افتراضية للطلبات، بدون أي بيانات شخصية.</p></div><span class="pill">5 أمثلة خيالية</span></div>
+<div class="desk-alert"><span aria-hidden="true">✳</span><div><strong>ليست لوحة طلبات حقيقية.</strong> الحالات أدناه مولّدة للتجربة ولا تتصل بالسلة أو بقاعدة بيانات. تغيير الحالة لا يرسل أي إشعار لأي شخص.</div></div>
+<div class="board" id="desk-board" aria-live="polite"></div>
+<div class="desk-toolbar" style="margin-top:24px"><button class="btn danger" id="reset-demo" type="button">↺ إعادة ضبط كل المسودات والطلبات الوهمية</button></div>
+</section>
+<section id="panel-quotes" class="panel" role="tabpanel" aria-labelledby="tab-quotes" hidden>
+<div class="section-head"><div><span class="eyebrow">03 / PERSONALIZED QUOTATION</span><h2>مسودة عرض سعر</h2><p>تجربة لتجميع تكلفة القطعة والإضافات والشحن؛ لا ترسل العرض للعميلة.</p></div><span class="pill soft">غير معتمد</span></div>
+<div class="quote-layout">
+<form class="quote-form" onsubmit="return false" aria-label="إعداد مسودة عرض سعر">
+<label class="field">القطعة<select id="quote-product"></select></label>
+<label class="field">الكمية<input id="quote-qty" value="1" type="number" inputmode="numeric" min="1" max="99" step="1"></label>
+<label class="field">إضافات أو تخصيص تقديري (جنيه)<input id="quote-extra" value="0" type="number" inputmode="numeric" min="0" max="1000000" step="1"></label>
+<label class="field">تقدير الشحن (جنيه)<input id="quote-delivery" value="0" type="number" inputmode="numeric" min="0" max="1000000" step="1"></label>
+<label class="field">ملاحظات بدون بيانات شخصية<textarea id="quote-notes" maxlength="250" placeholder="لون الخيوط المطلوب، نوع التغليف..."></textarea></label>
+</form>
+<div class="quote-result">
+<span class="eyebrow">ESTIMATE / NOT AN INVOICE</span>
+<h2>تقدير مبدئي</h2>
+<div id="quote-total" class="quote-total" aria-live="polite">—</div>
+<pre id="quote-output" aria-label="نص عرض السعر التقديري"></pre>
+<button id="copy-quote" type="button" class="btn primary">نسخ المسودة</button>
+<p class="privacy">لا تُستخدم هذه الأسعار في البيع قبل أن تؤكدها روميساء بنفسها. لا يتم حساب الضرائب أو التوصيل الفعلي ولا حجز أي موعد.</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="desk-footer"><span>✳ Romisaa Sobhi Gallery — Atelier Desk / Concept Preview</span><span>المشروع الحالي واجهة عرض عامة على GitHub Pages. حماية الإدارة والمدفوعات تحتاج Backend مستقلًا.</span></footer>
+</div>
+<div role="status" aria-live="polite" id="desk-toast" class="toast"></div>
+</body>
+</html>
