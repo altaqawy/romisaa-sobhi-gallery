@@ -24,6 +24,8 @@ jobs:
         run: python3 scripts/check_static.py
       - name: Test design review version guards
         run: node tests/review-flow.test.cjs
+      - name: Test occasion scheduling arithmetic
+        run: node tests/planner.test.cjs
       - name: Verify V5 is a local demo
         run: |
           grep -q "BROWSER-ONLY DEMONSTRATION" assets/v5-desk.js
