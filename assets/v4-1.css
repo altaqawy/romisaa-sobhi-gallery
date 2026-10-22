@@ -1,0 +1,37 @@
+/* The little Atelier note — couture-inspired WhatsApp contact dock V4.1 */
+.rs-contact-dock{position:fixed;left:26px;bottom:24px;z-index:1050;font-family:'Cairo',sans-serif;direction:rtl;isolation:isolate}
+.rs-contact-dock *{box-sizing:border-box}
+.rs-wa-trigger{height:65px;min-width:66px;max-width:235px;padding:0 7px 0 17px;display:flex;gap:12px;align-items:center;cursor:pointer;color:#523944;background:#fffaf3f2;border:1px solid #d6beae;border-radius:100px;box-shadow:0 13px 33px #37293422,0 2px 12px #fff5 inset;transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s,background .35s;position:relative;overflow:visible}
+.rs-wa-trigger::after{content:'';position:absolute;inset:4px;border:1px dashed #c6aaa2;border-radius:inherit;pointer-events:none;opacity:.65}
+.rs-wa-trigger:hover,.rs-wa-trigger[aria-expanded='true']{transform:translateY(-4px);background:#fffaf5;box-shadow:0 16px 43px #3729343d,0 0 0 3px #fff4e8}
+.rs-wa-seal{width:52px;height:52px;flex:0 0 52px;position:relative;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 20%,#8a6472,#563745 76%);border:1px solid #9f7e87;box-shadow:inset 0 0 0 3px #ffffff0d,0 0 0 1px #ccae9c}
+.rs-wa-thread{position:absolute;inset:-12px;width:74px;height:74px;pointer-events:none;overflow:visible;opacity:.8}
+.rs-wa-thread path{fill:none;stroke:#ccae7b;stroke-width:1.65;stroke-linecap:round;stroke-dasharray:290;stroke-dashoffset:290;animation:rs-wa-draw 3.1s .15s ease-out forwards}
+.rs-wa-thread path+path{stroke:#fff3db;stroke-width:.45;animation-delay:.3s}
+@keyframes rs-wa-draw{to{stroke-dashoffset:0}}
+.rs-wa-whatsapp{width:28px;height:28px;display:grid;place-items:center;background:#27775b;color:#fff;border:1px solid #bfdbcd;border-radius:50%;position:absolute;right:0;bottom:-3px;box-shadow:0 0 0 3px #fffaf3;z-index:2}
+.rs-wa-icon{width:19px;height:19px}
+.rs-wa-monogram{font-family:'Playfair Display',Georgia,serif;font-weight:600;color:#fff5ed;font-size:17px;letter-spacing:-.12em;margin-left:4px;line-height:1}
+.rs-wa-label{white-space:nowrap;display:flex;align-items:flex-start;flex-direction:column;gap:2px}
+.rs-wa-label strong{font-size:12px;letter-spacing:.01em;font-weight:700}.rs-wa-label small{font:600 7.5px 'DM Sans',sans-serif;letter-spacing:.13em;color:#a77c82}
+.rs-wa-chevron{font-size:19px;color:#a77e83;font-weight:400}
+.rs-wa-panel{position:absolute;bottom:78px;left:0;width:340px;max-width:calc(100vw - 32px);padding:23px;background:#fffaf4;border:1px solid #d8c6b8;box-shadow:0 22px 70px #36242b35,0 5px 14px #482e3414;border-radius:20px 20px 20px 5px;text-align:right;overflow:hidden;transform-origin:bottom left;animation:rs-wa-reveal .42s cubic-bezier(.16,1,.3,1) both}
+.rs-wa-panel[hidden]{display:none!important}
+@keyframes rs-wa-reveal{from{opacity:0;transform:translateY(13px) scale(.94)}to{opacity:1;transform:translateY(0) scale(1)}}
+.rs-wa-panel::before{content:'';position:absolute;inset:0 0 auto;height:5px;background:linear-gradient(90deg,#836273,#d8b6a7,#d5b77e);pointer-events:none}
+.rs-wa-panel-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-direction:row-reverse}
+.rs-wa-kicker{font:600 8px 'DM Sans',sans-serif;letter-spacing:.23em;color:#9e7b7c}
+.rs-wa-close{display:grid;place-items:center;width:29px;height:29px;border-radius:50%;color:#674651;background:#f1e5df;border:0;cursor:pointer;font-size:23px;line-height:1}
+.rs-wa-panel-brand{display:flex;gap:13px;align-items:center;margin:14px 0 16px}
+.rs-wa-mini-logo{width:51px;height:51px;border-radius:50%;display:grid;place-items:center;background:#573a48;color:#fff6eb;border:1px solid #c7b6a7;font:500 21px 'Playfair Display',serif;position:relative;flex-shrink:0}
+.rs-wa-mini-logo small{font-size:12px;position:absolute;bottom:1px;left:6px;color:#e7bfa8}
+.rs-wa-panel-brand strong{font-size:17px;display:block;font-weight:700;color:#4e3743}.rs-wa-panel-brand p{font-size:11px;color:#9a8580;margin:1px 0 0}
+.rs-wa-note{padding:13px 14px;margin:0 0 14px;border-inline-start:2px solid #bc9b8e;background:#f7eee8;color:#74636b;font-size:11px;line-height:2.1}
+.rs-wa-primary{background:#5b3a49!important;color:#fff9f3!important;width:100%;padding:13px 15px;border-radius:11px;border:0!important;display:flex;gap:10px;align-items:center;justify-content:space-between;cursor:pointer;text-decoration:none;font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;transition:background .25s,transform .25s}.rs-wa-primary:hover{background:#795263!important;transform:translateY(-2px)}
+.rs-wa-primary .rs-wa-icon{color:#d7e6db;width:22px;height:22px}.rs-wa-copy-symbol{font-size:24px;color:#e7c7ae}.rs-wa-primary b{font-size:18px;opacity:.65}
+.rs-wa-links{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:13px}.rs-wa-links a{padding:10px 8px;border:1px solid #e9d9ce;border-radius:8px;color:#795b65;background:#fffdf9;text-decoration:none;display:flex;align-items:center;justify-content:space-between;font-size:10px}.rs-wa-links a:hover{background:#f7eae6}.rs-wa-links a:first-child{grid-column:span 2}.rs-wa-links span{font-size:13px}
+.rs-wa-disclaimer{display:block;font-size:9px;color:#a99490;text-align:center;margin-top:13px}
+.rs-wa-trigger:focus-visible,.rs-wa-close:focus-visible,.rs-wa-primary:focus-visible,.rs-wa-links a:focus-visible{outline:3px solid #b37b8b;outline-offset:3px}
+@media(max-width:680px){.rs-contact-dock{left:14px;bottom:max(12px,env(safe-area-inset-bottom));}.rs-wa-trigger{width:61px;min-width:61px;height:61px;padding:4px;justify-content:center}.rs-wa-seal{width:48px;height:48px;flex-basis:48px}.rs-wa-trigger .rs-wa-label,.rs-wa-trigger .rs-wa-chevron{display:none}.rs-wa-panel{bottom:74px;max-height:min(75vh,570px);overflow:auto;width:min(330px,calc(100vw - 28px))}.rs-wa-thread{width:67px;height:67px}}
+@media(min-width:681px){.rs-wa-trigger .rs-wa-label{max-width:0;opacity:0;overflow:hidden;transition:opacity .3s,max-width .45s cubic-bezier(.16,1,.3,1)}.rs-wa-trigger:hover .rs-wa-label,.rs-wa-trigger:focus-visible .rs-wa-label,.rs-contact-dock.is-open .rs-wa-label{max-width:180px;opacity:1}.rs-wa-trigger:not(:hover):not(:focus-visible):not([aria-expanded='true']){padding-left:7px;max-width:67px;min-width:67px}.rs-wa-trigger:not(:hover):not(:focus-visible):not([aria-expanded='true']) .rs-wa-chevron{display:none}}
+@media(prefers-reduced-motion:reduce){.rs-contact-dock *, .rs-contact-dock *::before, .rs-contact-dock *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rs-wa-thread path{stroke-dashoffset:0}}
