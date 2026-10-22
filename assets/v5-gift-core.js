@@ -56,7 +56,7 @@
     return lines.filter(Boolean).slice(0,maxLines);
   }
   function svg(raw){
-    const x=normalize(raw),theme=THEMES[x.theme],lines=wrap(x.message,29,8);
+    const x=normalize(raw),theme=THEMES[x.theme],lines=wrap(x.message,32,10);
     const from=x.sender||"WITH LOVE";const to=x.recipient?"إلى "+x.recipient:"لكل لحظة جميلة";
     const body=lines.map((line,i)=>'<text x="350" y="'+(470+i*35)+'" text-anchor="middle" direction="rtl" font-size="23" fill="'+theme.color+'" font-family="Cairo, Tahoma, sans-serif">'+escapeLine(line)+'</text>').join("");
     return '<svg xmlns="http://www.w3.org/2000/svg" width="700" height="970" viewBox="0 0 700 970" role="img" aria-label="كارت إهداء">'
