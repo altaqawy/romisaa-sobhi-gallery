@@ -1,4 +1,9 @@
-# Romisaa Sobhi Gallery — V5 architecture / NOT DEPLOYED
+# Romisaa Sobhi Gallery — V5 architecture / PRODUCTION BACKEND NOT DEPLOYED
+
+## New V5 local-only preview
+- `atelier-desk.html` now demonstrates a product draft editor, fictional order-state board, quotation estimator and local JSON export.
+- This page is publicly accessible and is **not** a secure administrator console. Every change is kept in one browser via `localStorage`; public prices and other visitors are unaffected.
+- See `RELEASE_V5_DESK.md` for validation and the exact boundary between demo and real production.
 
 ## Current state
 - GitHub Pages: public static DEMO ONLY; V4.2 immersive lookbook, V4.3 gift finder + bespoke set builder, V5.1 embroidery visual laboratory.
