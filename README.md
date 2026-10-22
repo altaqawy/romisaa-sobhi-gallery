@@ -3,6 +3,7 @@
 > **Public design demo, not a transactional store.** Prices, stock and payment methods are placeholders. No real order or payment processing is enabled.
 
 ### Current interactive experiences
+- **New V5.4:** [Gift Message Studio](gift-card.html) — three live card designs, private local message preview, A5 print/PDF and SVG export. No cloud message storage or hosted personalized QR. [Release notes](docs/RELEASE_V5_4.md).
 - [Home](index.html), [Shop](shop.html), [Interactive Lookbook](lookbook.html), [Set Builder](studio.html), [Gift Finder](finder.html), [Stitch Lab](learn.html), [Wishlist](wishlist.html).
 - **New V5.3:** [Gift Date Planner — illustration of event lead times](delivery-planner.html). Uses visitor-entered assumed durations, never guarantees seller capacity or shipping. See [V5.3 report](docs/RELEASE_V5_3.md).
 - **New V5.2:** [Design Review Studio — fictional versioned approvals](design-review.html). Revision requests and approvals are simulated locally; a newer version invalidates earlier approval. See [delivery report](docs/RELEASE_V5_2.md).
