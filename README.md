@@ -1,3 +1,15 @@
+# Romisaa Sobhi Gallery — The Living Atelier (V5 preview)
+
+> **Public design demo, not a transactional store.** Prices, stock and payment methods are placeholders. No real order or payment processing is enabled.
+
+### Current interactive experiences
+- [Home](index.html), [Shop](shop.html), [Interactive Lookbook](lookbook.html), [Set Builder](studio.html), [Gift Finder](finder.html), [Stitch Lab](learn.html), [Wishlist](wishlist.html).
+- **New:** [Atelier Desk — local operations simulator](atelier-desk.html). Catalogue draft editing, fictional order stages, a quote calculator and JSON export. This is a public, unauthenticated browser-only demo; changes are **not** visible to customers and are **not** sent to a server.
+- [V5 implementation report](docs/RELEASE_V5_DESK.md) · [Production architecture](docs/V5_ARCHITECTURE.md) · [Database reference (not deployed)](docs/V5_SCHEMA_REFERENCE.sql).
+- GitHub Pages publishes the static site. Real administration, payments and customer accounts require a secure backend and merchant credentials.
+
+---
+
 # Romisaa Sobhi Gallery — Editorial Atelier V3
 
 **An original multipage Arabic RTL interactive website concept** by Rawnak Agency. V3 builds on the V2 demo without removing pages, catalog, shopping cart, custom request form or payment-method presentation.
