@@ -52,7 +52,6 @@ function render(){
   $('#v6-panel-editorial').innerHTML=shown.map(card).join('')||'<p class="v6-empty">مافيش صور متاحة للفئة دي.</p>';
   $('#v6-rail').innerHTML=shown.map(card).join('')||'<p class="v6-empty">مافيش صور متاحة.</p>';
   markCurrent();renderDetail();updateRail();
-  if(mode==='rail')$$('.v6-item','#v6-rail');
   rebuildReveal();
 }
 function setMode(name){
@@ -182,7 +181,7 @@ rail.addEventListener('pointermove',ev=>{
   if(drag.moved){rail.scrollLeft=drag.scrollLeft-delta;rail.style.scrollSnapType='none';}
 });
 function finishDrag(){if(!drag)return;if(drag.moved)suppressClick=true;drag=null;rail.style.scrollSnapType='';setTimeout(()=>{suppressClick=false},100);}
-rail.addEventListener('pointerup',finishDrag);rail.addEventListener('pointercancel',finishDrag);
+rail.addEventListener('pointerup',finishDrag);rail.addEventListener('pointercancel',finishDrag);window.addEventListener('pointerup',finishDrag);
 rail.addEventListener('click',ev=>{if(suppressClick){ev.preventDefault();ev.stopPropagation();}},true);
 render();setMode('editorial');
 })();
