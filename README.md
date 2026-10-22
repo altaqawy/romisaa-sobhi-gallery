@@ -1,8 +1,10 @@
-# Romisaa Sobhi Gallery — The Living Atelier (V5 preview)
+# Romisaa Sobhi Gallery — The Living Atelier (V6 preview)
 
 > **Public design demo, not a transactional store.** Prices, stock and payment methods are placeholders. No real order or payment processing is enabled.
 
 ### Current interactive experiences
+- **New V6.1:** [Immersive Gallery](gallery.html) — 18 original photographs, responsive Editorial / Horizontal / Detail modes, filters, fullscreen lightbox, touch/mouse navigation and reduced-motion support. AI-generated concept products are excluded from the real-work gallery. [Release notes](docs/RELEASE_V6_1.md).
+
 - **New V5.4:** [Gift Message Studio](gift-card.html) — three live card designs, private local message preview, A5 print/PDF and SVG export. No cloud message storage or hosted personalized QR. [Release notes](docs/RELEASE_V5_4.md).
 - [Home](index.html), [Shop](shop.html), [Interactive Lookbook](lookbook.html), [Set Builder](studio.html), [Gift Finder](finder.html), [Stitch Lab](learn.html), [Wishlist](wishlist.html).
 - **New V5.3:** [Gift Date Planner — illustration of event lead times](delivery-planner.html). Uses visitor-entered assumed durations, never guarantees seller capacity or shipping. See [V5.3 report](docs/RELEASE_V5_3.md).
