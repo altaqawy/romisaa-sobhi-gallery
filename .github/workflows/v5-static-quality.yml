@@ -28,6 +28,8 @@ jobs:
         run: node tests/planner.test.cjs
       - name: Test gift message studio safety and SVG export
         run: node tests/gift-card.test.cjs
+      - name: Test site experiences bootstrap
+        run: node tests/experiences-smoke.test.cjs
       - name: Verify V5 is a local demo
         run: |
           grep -q "BROWSER-ONLY DEMONSTRATION" assets/v5-desk.js
